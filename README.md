@@ -10,9 +10,9 @@ Gladius’ goal is to create a fully decentralized, peer to peer, serverless nod
 
 ### Gladius Edge Node
 
-#### [Install](~/gladius-node/install.md)
+#### [Install](./gladius-node/install.md)
 
-#### [Setup and Maintain](~/gladius-node/maintain.md)
+#### [Setup and Maintain](./gladius-node/maintain.md)
 
 ### Managing A Pool
 
