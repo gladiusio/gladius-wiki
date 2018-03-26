@@ -14,4 +14,5 @@ repository and install it by navigating to it's directory and running
 ## Router Configuration
 
 Open port 8080 on your router and point it towards the machine running the
-edge node software. 
+edge node software. If that doesn't sound too easy, reading
+[this page](https://en.wikipedia.org/wiki/Port_forwarding) should help you out.
