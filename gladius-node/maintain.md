@@ -15,4 +15,6 @@ repository and install it by navigating to it's directory and running
 
 Open port 8080 on your router and point it towards the machine running the
 edge node software. If that doesn't sound too easy, reading
-[this page](https://en.wikipedia.org/wiki/Port_forwarding) should help you out.
+[this page](https://en.wikipedia.org/wiki/Port_forwarding) should help you out
+with understanding what port forwarding does. Specific guides can usually be
+found by searching for `<your router name> port forwarding`.
