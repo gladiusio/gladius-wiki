@@ -1,35 +1,49 @@
-# Installing the Gladius Node
+## Installing the Gladius Node Manager
 
-## Setup
+#### Node.js
 
-Install [nodejs](https://nodejs.org/en/download/), then clone the
-[gladius-cli](https://github.com/gladiusio/gladius-cli)
-repository and install it by navigating to it's directory and running
-`npm install -g`
+Node.js provides a general installation guide [here](https://nodejs.org/en/download/package-manager/) but we will walk through the installation for Windows, Ubuntu, and macOS.
 
-## Install with either:
+We based this application off of the latest branch (9.9.0) at the time of this writing.
 
-### Docker
+Here are some shortcuts to commands
 
-Install [Docker](https://docs.docker.com/install/) and
-[Docker Compose](https://docs.docker.com/compose/install/)
+* Windows
+  * Download Installer, [here](https://nodejs.org/en/#download)
+  * Select the latest, 9.9.0+
+* Ubuntu
+  * `curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -`
+  * `sudo apt-get install -y nodejs`
+  * Change Global Installation Directory
+    * Our packages requires some dependencies that require superuser access if installed in the default Ubuntu paths. We recommend changing the default installation of global node modules to `~/.npm-global` as stated in the [npm.js docs](https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-two-change-npms-default-directory). We included the commands below:
+      * Run `mkdir ~/.npm-global`
+      * Run `npm config set prefix '~/.npm-global'`
+      * Add `export PATH=~/.npm-global/bin:$PATH` to your `.profile` of `.zshrc` file
+      * Run `source ~/.profile`
 
-Clone the
-[gladius-edge-docker](https://github.com/gladiusio/gladius-edge-docker)
-repository and run the command `docker-compose up -d --build` to build and run
-the containers.
+    * Another option is to use [NVM](https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-one-reinstall-with-a-node-version-manager) to handle permissions.
+* macOS
+  * Install Homebrew, [instructions](https://brew.sh/)
+    * `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+    * `brew install node`
 
-### Directly
+#### Git
 
-Install [pm2](http://pm2.keymetrics.io/) with `npm install pm2 -g`
+* Windows
+  * https://gitforwindows.org
+* Ubuntu
+  * `apt-get install git`
+* macOS
+  * Comes default with mac but can also be installed via [Homebrew](https://brew.sh/) (`brew install git`)
 
-Clone the
-[gladius-edge-daemon](https://github.com/gladiusio/gladius-edge-daemon) and
-[gladius-control-daemon](https://github.com/gladiusio/gladius-control-daemon)
-repositories.
+#### Gladius CLI
 
-Navigate to the gladius-edge-daemon folder and run `pm2 start index.js`, then
-navigate to the gladius-control-daemon folder and run the same command.
+  * Run `npm install -g gladius-edge-daemon`
 
-## Configuration
-See [here](./maintain.md)
+#### Gladius Control Daemon
+
+* Run `npm install -g gladius-control-daemon`
+
+#### Gladius Edge Daemon
+
+  * Run `npm install -g gladius-edge-daemon`
