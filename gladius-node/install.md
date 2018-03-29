@@ -48,7 +48,7 @@ Install [Docker](https://docs.docker.com/install/) and
 Clone the
 [gladius-edge-docker](https://github.com/gladiusio/gladius-edge-docker)
 repository and run the command `docker-compose up -d --build` to build and run
-the containers.
+the containers. After you can just run `docker-compose up -d`
 
 ### Direct install
 
