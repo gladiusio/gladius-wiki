@@ -1,6 +1,6 @@
 # Installing the Gladius Node Manager
 
-## Dependencies
+## Dependencies (direct install only)
 
 ### Node.js
 
@@ -37,6 +37,14 @@ Here are some shortcuts to commands
   * `apt-get install git`
 * macOS
   * Comes default with mac but can also be installed via [Homebrew](https://brew.sh/) (`brew install git`)
+
+### Python 2.7
+* Windows
+  * Run `npm install --global --production windows-build-tools` in cmd.exe as Administrator
+  * Run `setx PYTHON "%USERPROFILE%\.windows-build-tools\python27\python.exe"` in cmd.exe
+  * Restart cmd.exe
+* Ubuntu/macOs
+  * Comes default but can also be installed through their [website](https://www.python.org/)
 
 ## Gladius Software
 
