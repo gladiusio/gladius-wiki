@@ -38,7 +38,7 @@ Here are some shortcuts to commands
 
 #### Gladius CLI
 
-  * Run `npm install -g gladius-edge-daemon`
+  * Run `npm install -g gladius-cli`
 
 #### Gladius Control Daemon
 
