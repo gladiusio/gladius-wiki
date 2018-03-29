@@ -1,6 +1,8 @@
-## Installing the Gladius Node Manager
+# Installing the Gladius Node Manager
 
-#### Node.js
+## Dependencies
+
+### Node.js
 
 Node.js provides a general installation guide [here](https://nodejs.org/en/download/package-manager/) but we will walk through the installation for Windows, Ubuntu, and macOS.
 
@@ -27,7 +29,7 @@ Here are some shortcuts to commands
     * `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
     * `brew install node`
 
-#### Git
+### Git
 
 * Windows
   * https://gitforwindows.org
@@ -35,6 +37,20 @@ Here are some shortcuts to commands
   * `apt-get install git`
 * macOS
   * Comes default with mac but can also be installed via [Homebrew](https://brew.sh/) (`brew install git`)
+
+## Gladius Software
+
+### Using Docker
+
+Install [Docker](https://docs.docker.com/install/) and
+[Docker Compose](https://docs.docker.com/compose/install/)
+
+Clone the
+[gladius-edge-docker](https://github.com/gladiusio/gladius-edge-docker)
+repository and run the command `docker-compose up -d --build` to build and run
+the containers.
+
+### Direct install
 
 #### Gladius CLI
 
