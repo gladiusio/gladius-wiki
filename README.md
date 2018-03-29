@@ -14,7 +14,7 @@ Gladius’ goal is to create a fully decentralized, peer to peer, serverless nod
 
 #### [Setup and Maintain](./gladius-node/maintain.md)
 
-### Managing A Pool
+### Managing A Pool (Not implemented)
 
 #### [Payment](~/pool-management/payment.md)
 
@@ -22,7 +22,7 @@ Gladius’ goal is to create a fully decentralized, peer to peer, serverless nod
 
 #### [Promotion to Master Node](~/pool-management/master-node.md)
 
-### Website Setup
+### Website Setup (Not implemented)
 
 #### [Here](https://gladius.io)
 
