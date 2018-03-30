@@ -23,7 +23,7 @@
 #### Gladius CLI
 
 - Set up a local static IP for the machine you will be running the Gladius node on
-- Forward port 8080 on your router to that machine, and make sure you enable NAT Pinning (so you can access websites you protect)
+- Forward port 8080 on your router to that machine, and make sure you enable hairpin nat (so you can access websites you protect)
 - **Warning: Make sure port 3000 and 5000 are not accesible from the outside!**
 - Create a [new Ethereum wallet](https://medium.com/benebit/how-to-create-a-wallet-on-myetherwallet-and-metamask-e84da095d888)
 - Acquire 1 Ether on the [Ropsten testnet](http://faucet.ropsten.be:3001/) (or go [here](https://blog.bankex.org/how-to-buy-ethereum-using-metamask-ccea0703daec) if you're using Metamask)
