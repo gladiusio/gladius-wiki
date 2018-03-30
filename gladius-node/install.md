@@ -66,6 +66,9 @@ Clone the
 repository and run the command `docker-compose up -d --build` to build and run
 the containers. After you can just run `docker-compose up -d`
 
+To control these you will still need to install the `gladius-cli` package on
+your host machine with `npm install -g gladius-cli`
+
 ### Direct install
 
 #### Gladius CLI
