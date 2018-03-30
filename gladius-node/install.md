@@ -46,6 +46,14 @@ Here are some shortcuts to commands
 * Ubuntu/macOs
   * Comes default but can also be installed through their [website](https://www.python.org/)
 
+### Compilers
+* Windows
+  * `build-tools` install from above will install the visual studio compilers
+* Ubuntu
+  * `sudo apt-get install make g++`
+* macOS
+  * Should be default installed
+
 ## Gladius Software
 
 ### Using Docker
