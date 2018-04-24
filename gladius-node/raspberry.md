@@ -160,6 +160,8 @@ sudo systemctl start gladius-control-daemon
 sudo systemctl start gladius-edge-daemon
 ```
 
+*Attention:* From here on the gladius control and edge daemon will always start automatically. There is *no* need to run `gladius-control` or `gladius-edge` manually in a ssh session.
+
 #### check gladius daemons
 Lets check if both gladius daemons are running.
 
@@ -178,8 +180,86 @@ gladius-node status
 ```
 *Attention:* The gladius node status command will complain about the missing keys. We will create them in the next chapter
  
-### Configure Gladius
-With the gla
+### Initialise Gladius
+With the gladius daemons running we can initialise the gladius node. To do this you need to run `gladius init`.
+The following shows a complete `init` process.
+
+```
+gladius-node init
+[Gladius-Node] What's your email? (So we can contact you about the beta):  huttersebastian@gmail.com
+[Gladius-Node] What's your first name?  Sebastian
+[Gladius-Node] Short bio about why you're interested in Gladius:  This is a documentation registration. Please ignore.
+[Gladius-Node] Please make a new ETH wallet and paste your private key (include 0x at the beginning):
+[Gladius-Node] Please enter a passphrase for your new PGP keys:
+[Gladius-Node] User profile created! You may create a node with gladius-node create
+[Gladius-Node] If you'd like to change your information run gladius-node init again
+```
+
+*Attention:* 
+- When you enter your wallets private key - including `0x` at the beginning - the shell will not show any entered characters. The same is true when you enter a password. Entered characters will *not* shown! 
+- Please make sure you store the password for your GPG keys safely. You need the password for the next steps
+
+
+#### Create the gladius node
+After successfull initialization you can create the node. The following shows a complete `create` process.
+
+```
+gladius-node create
+[Gladius-Node] Please enter the passphrase for your PGP private key:
+[Gladius-Node] Creating Node contract, please wait for tx to complete (this might take a couple of minutes)
+[Gladius-Node] Transaction: 0x604ef8812c7d719f2fa31018855edc28a480eb966488db56fbc4390974e15924  [Success]
+[Gladius-Node] Setting Node data, please wait for tx to complete (this might take a couple of minutes)
+[Gladius-Node] Transaction: 0x32392f13ee168ceb277574be3f12f694397e5a884438641c8b2dcc9a7e31a71b  [Success]
+[Gladius-Node] Node successfully created and ready to use
+[Gladius-Node] Use gladius-node apply to apply to a pool
+```
+
+*Attention:* 
+- If the process hangs while creating the node contract make sure you have 1 ETH from the [ropsten test network](http://faucet.ropsten.be:3001/) in the specified wallet. If not stop the process (Ctrl+C) and transfer 1 ETH. After the ETH has arrived re-run `create`.
+- As with the `init` process the password for your GPG keys is *not* shown when you enter it.
+
+#### Apply for the beta pool
+After successfull node creation you can apply for the beta pool. You need the beta pool address - you can find it in the beta invitation email.
+
+The following shows a complete `apply` process:
+```
+gladius-node apply
+[Gladius-Node] Please enter the passphrase for your PGP private key:
+[Gladius-Node] Please enter the address of the pool you want to join:   0xABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCD
+[Gladius-Node] Transaction: 0xa8140815877b76c9c6409f4a82a88a5c260b67b0468eceb6461b14d7bbb0f1e7  [Success]
+[Gladius-Node] Application sent to Pool!
+[Gladius-Node] Use gladius-node check to check your application status
+```
+
+*Attention:* 
+- The pool address in the example is *not* a valid pool address. please check your beta invitation email for the correct address
+- As with the `init` process the password for your GPG keys is *not* shown when you enter it.
+
+#### Check your pool application
+To check your pool application status you can run `check`
+```
+gladius-node check
+[Gladius-Node] Please enter the address of the pool you want to check on:   0xABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCD
+[Gladius-Node] Pool: 0xABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDsusch  [Application Status: Pending]
+[Gladius-Node] Wait until the pool manager accepts your application in order to become an edge node
+```
+
+## Use Gladius
+
+#### start gladius node
+When your application is approved you can start your gladius node
+```
+gladius-node start
+[Gladius-Node] Gladius Edge Daemon running, you are now an edge node! (If you're a part of a pool)
+```
+
+#### check the gladius node
+```
+gladius-node status
+[Gladius-Node] Gladius Control Daemon server is running!
+[Gladius-Node] Gladius Edge Daemon running, you are an edge node!
+[Gladius-Node] If you'd like to stop, run gladius-node stop
+```
 
 ## Next steps
 This document is not finished. 
