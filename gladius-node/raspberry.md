@@ -55,14 +55,14 @@ With the the test wallet filled up, the raspbian os installed and the network co
 Before we setup gladius login via ssh and the static ip to your raspberry pi (for windows users I recommend [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). The default username is `pi` and password is `raspberry`
 
 After the successfull login change the password of the pi user:
-```
+```bash
 passwd
 ```
 
 #### update system
 It is a good idea to upgrade the base system before proceeding with the gladius setup.
 
-```
+```bash
 # update apt package definition
 sudo apt-get update
 
@@ -72,7 +72,7 @@ sudo apt-get upgrade -y
 
 #### install nodejs
 First we install nodejs. 
-```
+```bash
 # install the node repository
 curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 
@@ -81,7 +81,7 @@ sudo apt-get install -y nodejs
 ```
 
 After the installation we need to change the default nodejs paths so we dont need superuser rights to install packages.
-```
+```bash
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 echo "PATH=~/.npm-global/bin:$PATH" >> ~/.bashrc
@@ -90,13 +90,13 @@ source .bashrc
 
 #### install other requirements
 For the gladius installation we need make, git and other tools installed too:
-```
+```bash
 sudo apt-get install -y git make g++
 ```
 
 #### install gladius binaries
 All gladius binaries can be installed with the node package manager
-```
+```bash
 # install the cli
 npm install -g gladius-cli
 # install the control daemon
@@ -108,7 +108,7 @@ npm install -g gladius-edge-daemon
 #### setup gladius services
 There are no service files installed by default. To simplify running the services we need to create two systemd service units for the control end edge daemon.
 
-```
+```bash
 # create service file for control daemon
 sudo bash -c 'cat << EOF > /etc/systemd/system/gladius-control-daemon.service
 [Unit]
@@ -145,12 +145,12 @@ EOF'
 ```
 
 With the systemd units in place we need to instruct systemd to reload the configuration
-```
+```bash
 sudo systemctl daemon-reload
 ```
 
 Next we instruct the services to start on system boot and start the services.
-```
+```bash
 # enable services on boot
 sudo systemctl enable gladius-control-daemon
 sudo systemctl enable gladius-edge-daemon
@@ -164,7 +164,7 @@ sudo systemctl start gladius-edge-daemon
 Lets check if both gladius daemons are running.
 
 We can use `systemctl` to check if the services started successfully: 
-```
+```bash
 # use systemctl status to check the service state
 sudo systemctl status gladius-control-daemon
 sudo systemctl status gladius-edge-daemon
@@ -172,7 +172,7 @@ sudo systemctl status gladius-edge-daemon
 
 
 With the gladius cli we can also check the status of the daemons:
-```
+```bash
 # use the gladius cli to check node status
 gladius-node status
 ```
