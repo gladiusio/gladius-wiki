@@ -27,6 +27,5 @@ Gladius’ goal is to create a fully decentralized, peer to peer, serverless nod
 ### Website Setup (Not implemented)
 
 #### [Here](https://gladius.io)
-test
 
 ## Pull Request Guidelines
