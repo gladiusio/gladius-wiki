@@ -29,3 +29,6 @@ Gladius’ goal is to create a fully decentralized, peer to peer, serverless nod
 #### [Here](https://gladius.io)
 
 ## Pull Request Guidelines
+
+### Router/ Firewall guides for Port forwarding
+#### [Router.md](~/gladius-wiki/router.md)
