@@ -60,4 +60,4 @@ Here are some shortcuts to commands
 Install [Docker](https://docs.docker.com/install/) and
 [Docker Compose](https://docs.docker.com/compose/install/)
 
-Follow the commands [here](https://github.com/gladiusio/gladius-wiki/blob/master/gladius-node/install.md#compilers)
+Follow the commands [here](https://github.com/gladiusio/gladius-node#docker)
