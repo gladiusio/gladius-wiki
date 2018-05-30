@@ -1,33 +1,7 @@
-# Installing the Gladius Node Manager
+# Installing the Gladius Edge Node
+###
 
-## Dependencies (direct install only)
-
-### Node.js
-
-Node.js provides a general installation guide [here](https://nodejs.org/en/download/package-manager/) but we will walk through the installation for Windows, Ubuntu, and macOS.
-
-We based this application off of the latest branch (9.9.0) at the time of this writing.
-
-Here are some shortcuts to commands
-
-* Windows
-  * Download Installer, [here](https://nodejs.org/en/#download)
-  * Select the latest, 9.9.0+
-* Ubuntu
-  * `curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -`
-  * `sudo apt-get install -y nodejs`
-  * Change Global Installation Directory
-    * Our packages requires some dependencies that require superuser access if installed in the default Ubuntu paths. We recommend changing the default installation of global node modules to `~/.npm-global` as stated in the [npm.js docs](https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-two-change-npms-default-directory). We included the commands below:
-      * Run `mkdir ~/.npm-global`
-      * Run `npm config set prefix '~/.npm-global'`
-      * Add `export PATH=~/.npm-global/bin:$PATH` to your `.profile` of `.zshrc` file
-      * Run `source ~/.profile`
-
-    * Another option is to use [NVM](https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-one-reinstall-with-a-node-version-manager) to handle permissions.
-* macOS
-  * Install Homebrew, [instructions](https://brew.sh/)
-    * `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-    * `brew install node`
+* The new install guide is located [here](https://github.com/gladiusio/gladius-node)
 
 ### Git
 
@@ -38,12 +12,6 @@ Here are some shortcuts to commands
 * macOS
   * Comes default with mac but can also be installed via [Homebrew](https://brew.sh/) (`brew install git`)
 
-### Python 2.7
-* Windows
-  * Run `setx PYTHON "%USERPROFILE%\.windows-build-tools\python27\python.exe"` in cmd.exe
-  * Restart cmd.exe
-* Ubuntu/macOs
-  * Comes default but can also be installed through their [website](https://www.python.org/)
 
 ### Compilers
 * Windows
