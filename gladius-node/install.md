@@ -40,7 +40,6 @@ Here are some shortcuts to commands
 
 ### Python 2.7
 * Windows
-  * Run `npm install --global --production windows-build-tools` in cmd.exe as Administrator
   * Run `setx PYTHON "%USERPROFILE%\.windows-build-tools\python27\python.exe"` in cmd.exe
   * Restart cmd.exe
 * Ubuntu/macOs
@@ -61,24 +60,4 @@ Here are some shortcuts to commands
 Install [Docker](https://docs.docker.com/install/) and
 [Docker Compose](https://docs.docker.com/compose/install/)
 
-Clone the
-[gladius-edge-docker](https://github.com/gladiusio/gladius-edge-docker)
-repository and run the command `docker-compose up -d --build` to build and run
-the containers. After you can just run `docker-compose up -d`
-
-To control these you will still need to install the `gladius-cli` package on
-your host machine with `npm install -g gladius-cli`
-
-### Direct install
-
-#### Gladius CLI
-
-  * Run `npm install -g gladius-cli`
-
-#### Gladius Control Daemon
-
-* Run `npm install -g gladius-control-daemon`
-
-#### Gladius Edge Daemon
-
-  * Run `npm install -g gladius-edge-daemon`
+Follow the commands [here](https://github.com/gladiusio/gladius-wiki/blob/master/gladius-node/install.md#compilers)
