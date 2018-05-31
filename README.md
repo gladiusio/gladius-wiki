@@ -10,7 +10,7 @@ Gladius’ goal is to create a fully decentralized, peer to peer, serverless nod
 
 ### Gladius Edge Node
 
-#### [Install](./gladius-node/install.md)
+#### [Install](https://github.com/gladiusio/gladius-node#gladius-node-golang-version)
 
 #### [Setup and Maintain](./gladius-node/maintain.md)
 
