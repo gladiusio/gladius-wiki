@@ -248,7 +248,5 @@ Further information for the installation process
 ### Raspbian
 - https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 - https://hackernoon.com/raspberry-pi-headless-install-462ccabd75d0
-- https://www.w3schools.com/nodejs/nodejs_raspberrypi.asp
-- https://nodesource.com/blog/running-your-node-js-app-with-systemd-part-1/
 ### raspberry pi
 - https://github.com/RetroPie/RetroPie-Setup/wiki/Overclocking
