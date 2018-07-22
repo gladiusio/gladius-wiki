@@ -138,7 +138,7 @@ gladius create
 [Gladius] Create a passphrase for your new wallet:  ********
 [Gladius] Confirm your passphrase:  ********
 
-Wallet Address: 0x0c5baed5f5a33adbf0ed122f5bcd04c9a1ce3208
+Wallet Address: 0x6871B6CFAf856eaB3d2B838f588D70Ac5fEd1804
 
 Please add test ether to your new wallet from a ropsten faucet
 
